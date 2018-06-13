@@ -1,0 +1,90 @@
+.menu{
+    display: block;
+}
+.menu li, a{
+    display: inline-block;
+    font-size: 20px;
+    color: #b75752;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.menu a:hover{
+    color: #002c57;
+    text-decoration: underline;
+}
+.menu-rwd{
+    display: none;
+}
+.menu-rwd a{
+    font-size: 25px;
+    font-weight: bold;
+    color: #b75752;
+    text-decoration: none;
+}
+.menu-rwd a:hover{
+    color: #002c57;
+}
+.title{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #002c57;
+    background-color: #b75752;
+    line-height: 300px;
+}
+.title-rwd{
+    display: none;
+}
+.frame{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.box{
+    background-color: #ffcccc;
+    width: 260px;
+    margin: 10px;
+    display: inline-block; /*讓區塊並排*/
+    vertical-align: top; /*垂直對齊靠上*/
+}
+
+/*CSS 3 Media Query*/
+/*500px~1200px*/
+@media (max-width:1200px){
+    /*螢幕尺寸小於 1200px 的時候，套用這個區塊的設定*/
+    .frame{
+        width: 100%;
+    }
+    .box{
+        width: 45%;
+    }
+}
+/*0~500px*/
+@media (max-width:500px){
+    /*螢幕尺寸小於 500px 的時候，套用這個區塊的設定*/
+    .menu{
+    display: none;
+    }
+    .menu-rwd{
+        display: block;
+    }
+    .title{
+        display: none;
+    }
+    .title-rwd{
+        display: block;
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        color: #002c57;
+        background-color: #b75752;
+}
+    .box{
+        width: 90%;
+    }
+}
+
+/*
+螢幕的尺寸
+320px--->500px--->1200px--->1920px
+*/
